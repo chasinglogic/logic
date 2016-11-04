@@ -1,9 +1,12 @@
 {{ partial "header" . }}
 
+<h1 class="text-center">Archived Posts</h1>
+
 {{ range .Data.Pages }}
-<div>
-  <a style="display: inline-block" href="{{ .Permalink }}">{{ .Title }}</a>
-  <div style="display: inline-block" 
-       class="meta">{{ .Date.Format "Mon, Jan 2, 2006"  }}</div>
-</div> 
+<div style="border-bottom: 1px solid #eee; text-align: center;">
+  <h3>
+    <a href={{ .Permalink }}>{{ .Title }}</a>
+    {{ .Date.Format "Mon, Jan 2, 2006" }}
+  </h3>
+</div>
 {{ end }}
