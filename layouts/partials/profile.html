@@ -29,7 +29,12 @@
       {{ .Site.Params.email }}
     </p>
     {{ end }}
-
+    {{ if isset .Site.Params "resume" }}
+    <p>
+      <i class="fa fa-id-card-o" aria-hidden="true"></i>
+      <a href="{{ .Site.Params.resume }}">Download Resume</a>
+    </p>
+    {{ end }}
   </div>
 </div>
   </div>
