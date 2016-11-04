@@ -1,0 +1,42 @@
+.profile-container {
+  text-align: center;
+}
+
+.profile {
+  border-bottom: 1px solid #eee;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: inline-block;
+}
+
+.profile-pic-container, .profile-info-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profile-pic-container {
+  margin-left: auto;
+}
+
+.profile-info-container {
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+.profile-pic {
+  max-width: 155px;
+  max-height: 155px;
+  border-radius: 100px;
+}
+
+.profile-info {
+  padding-top: 10px;
+  min-height: 155px;
+  /* min-width: 400px; */
+}
+
+.profile-info p {
+  vertical-align: center;
+  font-size: 1.3em;
+}
