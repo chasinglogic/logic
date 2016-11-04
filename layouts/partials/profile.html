@@ -1,6 +1,36 @@
-<div class="profile">
-  <img class="profile-pic" src="/img/profile_pic.jpg" />
-{{ .Site.Params.github_username }}
+<link rel="stylesheet" href="/css/profile.css" >
+<div class="profile-container">
+  <div class="profile">
+    <div class="profile-pic-container">
+      <img class="profile-pic" src="/img/profile_pic.jpg" />
+    </div>
+<div class="profile-info-container">
+  <div class="profile-info">
+    <p>{{ .Site.Params.author }}</p>
+    {{ if isset .Site.Params "github_username" }}
+    <p>
+      <i class="fa fa-github" aria-hidden="true"></i>
+      <a href="https://github.com/{{ .Site.Params.github_username }}">          
+        {{ .Site.Params.github_username }}
+      </a>
+    </p>
+    {{ end }}
+    {{ if isset .Site.Params "twitter_username" }}
+    <p>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <a href="https://twitter.com/{{ .Site.Params.twitter_username }}">          
+        @{{ .Site.Params.twitter_username }}
+      </a>
+    </p>
+    {{ end }}
+    {{ if isset .Site.Params "email" }}
+    <p>
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      {{ .Site.Params.email }}
+    </p>
+    {{ end }}
 
-
+  </div>
+</div>
+  </div>
 </div>
