@@ -1,9 +1,12 @@
 <div class="li">
   <h3>
     <a href={{ .Permalink }}>{{ .Title }}</a>
-    {{ .Date.Format "Mon, Jan 2, 2006" }}
+    <span class="li-date">
+      {{ .Date.Format "Mon, Jan 2, 2006" }}
+    </span>
   </h3>
   <p>
     {{ .Summary }}
   </p>
+  <a href={{ .Permalink }}>Continue reading...</a>
 </div>
