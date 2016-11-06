@@ -9,6 +9,12 @@
 
 <div class="profile-card">
   {{ partial "profile.html" . }}
+
+  {{ if isset .Site.Params "bio" }}
+  <p>
+    {{ .Site.Params.bio }}
+  </p>
+  {{ end }}
 </div>
 
 {{ partial "footer.html" . }}

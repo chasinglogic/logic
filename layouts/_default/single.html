@@ -3,6 +3,9 @@
 <div class="article container content">
   <h1 class="title">{{ .Title }}</h1>
   {{ .Content }}
+  <div style="text-align: center;">
+    {{ partial "profile" . }}
+  </div>
 </div>
 
 {{ partial "footer" . }}
