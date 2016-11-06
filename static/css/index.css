@@ -29,12 +29,18 @@
   position: relative;
   top: 40%;
   transform: translateY(-50%);
-  max-width: 500px;
+  max-width: 450px;
+  padding: .5em;
   margin-right: auto;
   margin-left: auto;
-  max-height: 230px;
+  max-height: 240px;
   border-radius: 5px;
   box-shadow: 0px 0px 15px black;
+  background-color: white;
+}
+
+.profile-card p {
+  margin-left: .5em;
 }
 
 .navbar {
