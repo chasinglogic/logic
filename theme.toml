@@ -5,7 +5,7 @@ description = "A simple theme for bloggers with a Github."
 homepage = "http://chasinglogic.io/"
 tags = ["blog", "syntax", "code", "programming", "github", "analytics"]
 features = ["google-analytics", "share", "syntax-highlighting"]
-min_version = 0.17
+min_version = 0.16
 
 [author]
   name = "Mathew Robinson"
