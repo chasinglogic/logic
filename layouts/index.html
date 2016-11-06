@@ -2,10 +2,13 @@
 
 <style>
   body {
+    height: 100%;
     background-color: {{ .Site.Params.background_color }};
   }
 </style>
 
-{{ partial "profile.html" . }}
+<div class="profile-card">
+  {{ partial "profile.html" . }}
+</div>
 
 {{ partial "footer.html" . }}

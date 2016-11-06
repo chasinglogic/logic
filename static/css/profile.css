@@ -1,24 +1,9 @@
-.profile-container {
-  text-align: center;
-  height: 100%;
-}
-
 .profile {
-  position: relative;
-  top: 40%;
-  transform: translateY(-50%);
-}
-
-.profile {
-  border-bottom: 1px solid #eee;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
   text-align: center;
   display: inline-block;
-  vertical-align: middle;
   background-color: white;
   max-width: 500px;
+  border-radius: 5px;
 }
 
 .profile-pic-container, .profile-info-container {
