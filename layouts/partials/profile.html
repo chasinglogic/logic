@@ -35,6 +35,11 @@
     </p>
     {{ end }}
   </div>
+    {{ if isset .Site.Params "bio" }}
+    <p>
+      {{ .Site.Params.bio }}
+    </p>
+    {{ end }}
 </div>
   </div>
 </div>
