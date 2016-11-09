@@ -14,7 +14,7 @@
 
   {{ if isset .Site.Params "bio" }}
   <p>
-    {{ .Site.Params.bio }}
+    {{ safeHTML .Site.Params.bio }}
   </p>
   {{ end }}
 </div>
