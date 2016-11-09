@@ -4,7 +4,10 @@
     {{ .Hugo.Generator }}
 
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/single.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" href="/css/profile.css" />
+
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet"
@@ -36,7 +39,7 @@
   <style>
     body {
       height: 100%;
-      background-color: {{ .Site.Params.background_color }};
+      background-color: {{ default "#ddd" .Site.Params.background_color }};
     }
 
     .content {
