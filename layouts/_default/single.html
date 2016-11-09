@@ -1,9 +1,10 @@
 {{ partial "header" . }}
 
-<div class="article container content">
-  <h1 class="title">{{ .Title }}</h1>
+<div class="article container content"> 
+  <h2 class="title">{{ .Title }} <small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small></h2>
   {{ .Content }}
-  <div style="text-align: center;">
+
+  <div class="author-profile" style="text-align: center;">
     {{ partial "profile" . }}
   </div>
 </div>
