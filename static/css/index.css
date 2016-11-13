@@ -12,11 +12,6 @@ blockquote p {
   margin-right: auto;
 }
 
-.li-date {
-  text-align: right;
-  float: right;
-}
-
 .article {
   max-width: 700px;
 }
@@ -35,10 +30,8 @@ blockquote p {
 
 .profile-card {
   position: relative;
-  top: 40%;
+  top: 45%;
   transform: translateY(-50%);
-  min-width: 500px;
-  max-width: 600px;
   padding: .5em;
   margin-right: auto;
   margin-left: auto;
@@ -47,10 +40,20 @@ blockquote p {
   background-color: white;
 }
 
+@media (min-width: 1200px) {
+  .profile-card {
+    max-width: 700px;
+  }
+}
+
 .profile-card p {
   margin-left: .5em;
 }
 
 .navbar {
   box-shadow: 0px 0px 15px black !important;
+}
+
+.navbar li:hover {
+  background-color: #ddd;
 }
