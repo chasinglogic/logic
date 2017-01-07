@@ -40,9 +40,13 @@ blockquote p {
   background-color: white;
 }
 
+#bio {
+    padding: .5em;
+}
+
 @media (min-width: 1200px) {
   .profile-card {
-    max-width: 700px;
+    max-width: 600px;
   }
 }
 
