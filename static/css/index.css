@@ -7,7 +7,7 @@ blockquote p {
 }
 
 .li {
-  max-width: 800px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -29,15 +29,10 @@ blockquote p {
 }
 
 .profile-card {
-  position: relative;
-  top: 45%;
-  transform: translateY(-50%);
   padding: .5em;
   margin-right: auto;
   margin-left: auto;
   border-radius: 5px;
-  box-shadow: 0px 0px 15px black;
-  background-color: white;
 }
 
 #bio {
@@ -54,10 +49,39 @@ blockquote p {
   margin-left: .5em;
 }
 
-.navbar {
-  box-shadow: 0px 0px 15px black !important;
+.author-profile {
+  padding-top: 1em;
+  margin-top: 2em;
+  border-top: 1px solid #ddd;
 }
 
-.navbar li:hover {
-  background-color: #ddd;
+.article pre {
+    border-radius: 0px;
+    padding: 20px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 23px;
+    font-size: 1.3em;
+}
+
+.article blockquote {
+    font-size: 1.1em;
+}
+
+.article p {
+    font-size: 1.4em;
+    letter-spacing: -.003em;
+    line-height: 1.58;
+}
+
+.home-button {
+    position: fixed;
+    font-size: 1.3em;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.home-button a {
+    text-decoration: none;
+    color: black;
 }

@@ -1,12 +1,5 @@
 {{ partial "header.html" . }}
 
-<style>
-  body {
-    height: 100%;
-    background-color: {{ .Site.Params.background_color }};
-  }
-</style>
-
 <div class="profile-card">
   <div class="text-center">
     {{ partial "profile.html" . }}
@@ -18,5 +11,25 @@
   </p>
   {{ end }}
 </div>
+
+<div class="container">
+  {{ range .Paginator.Pages }}
+    {{ .Render "li" }}
+  {{ end }}
+</div>
+
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext)  }}
+<nav class="paging">
+  {{ if .Paginator.HasPrev  }}
+  <a href="{{ .URL  }}page/{{ .Paginator.Prev.PageNumber  }}" class="left"
+                                                              rel="prev">PREV</a>
+  {{ end  }}
+
+  {{ if .Paginator.HasNext  }}
+  <a href="{{ .URL  }}page/{{ .Paginator.Next.PageNumber  }}"
+     class="right" rel="next">NEXT</a>
+  {{ end  }}
+</nav>
+{{ end  }}
 
 {{ partial "footer.html" . }}
