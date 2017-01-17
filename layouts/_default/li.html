@@ -1,15 +1,20 @@
 <div class="li content">
-  <h3>
-    <a href={{ .Permalink }}>{{ .Title }}</a>
-    <span class="text-right pull-right visible-md-block visible-lg-block">
-      {{ .Date.Format "Mon, Jan 2, 2006" }}
-    </span>
-    <span class="text-left visible-sm-block visible-xs-block">
-      {{ .Date.Format "Mon, Jan 2, 2006" }}
-    </span>
-  </h3>
-  <p>
-    {{ .Summary }}
-  </p>
-  <a href={{ .Permalink }}>Continue reading...</a>
+    <h3>
+	<!-- not mobile -->
+	<a class="hidden-sm-down" href={{ .Permalink }}>{{ .Title }}</a>
+	<span class="text-right pull-right hidden-sm-down">
+	    {{ .Date.Format "Mon, Jan 2, 2006" }}
+	</span>
+
+	<!-- mobile -->
+	<a class="block hidden-md-up" href={{ .Permalink }}>{{ .Title }}</a>
+	<span class="text-left hidden-md-up block">
+	    {{ .Date.Format "Mon, Jan 2, 2006" }}
+	</span>
+
+    </h3>
+    <p>
+	{{ .Summary }}
+    </p>
+    <div class="border"></div>
 </div>
