@@ -1,0 +1,22 @@
+<div class="container">
+    {{ range .Paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+</div>
+
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext)  }}
+<div class="pager">
+    {{ if .Paginator.HasPrev  }}
+    <a class="text-deco-none" href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}">
+	<div class="btn btn-md btn-outline-primary d-inline-block">Prev</div>
+    </a>
+    {{ end }}
+
+    {{ if .Paginator.HasNext }}
+    <a class="text-deco-none" href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}">
+	<div class="btn btn-md btn-outline-primary d-inline-block">Next</div>
+    </a>
+    {{ end }}
+</div>
+{{ end }}
+

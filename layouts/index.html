@@ -1,38 +1,4 @@
 {{ partial "header.html" . }}
-
-<div class="profile-card">
-    <div class="text-center">
-	{{ partial "profile.html" . }}
-    </div>
-
-    {{ if isset .Site.Params "bio" }}
-    <p id="bio" class="hidden-sm-down">
-	{{ safeHTML .Site.Params.bio }}
-    </p>
-    {{ end }}
-</div>
-
-
-<div class="container">
-
-
-    {{ range .Paginator.Pages }}
-    {{ .Render "li" }}
-    {{ end }}
-</div>
-
-{{ if or (.Paginator.HasPrev) (.Paginator.HasNext)  }}
-<nav class="paging">
-    {{ if .Paginator.HasPrev  }}
-    <a href="{{ .URL  }}page/{{ .Paginator.Prev.PageNumber  }}" class="left"
-       rel="prev">PREV</a>
-    {{ end  }}
-
-    {{ if .Paginator.HasNext  }}
-    <a href="{{ .URL  }}page/{{ .Paginator.Next.PageNumber  }}"
-       class="right" rel="next">NEXT</a>
-    {{ end  }}
-</nav>
-{{ end  }}
-
+{{ partial "profile_card.html" . }}
+{{ partial "paginator.html" . }}
 {{ partial "footer.html" . }}

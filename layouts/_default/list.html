@@ -1,25 +1,4 @@
-{{ partial "header" . }}
-
-<div class="container">
-  {{ range .Paginator.Pages }}
-    {{ .Render "li" }}
-  {{ end }}
-</div>
-
-{{ if or (.Paginator.HasPrev) (.Paginator.HasNext)  }}
-<nav class="paging">
-  {{ if .Paginator.HasPrev  }}
-  <a href="{{ .URL  }}page/{{ .Paginator.Prev.PageNumber  }}" class="left"
-                                                              rel="prev">PREV</a>
-  {{ end  }}
-
-  {{ if .Paginator.HasNext  }}
-  <a href="{{ .URL  }}page/{{ .Paginator.Next.PageNumber  }}"
-     class="right" rel="next">NEXT</a>
-  {{ end  }}
-</nav>
-{{ end  }}
-
-
-
+{{ partial "header.html" . }}
+{{ partial "profile_card.html" . }}
+{{ partial "paginator.html" . }}
 {{ partial "footer.html" . }}

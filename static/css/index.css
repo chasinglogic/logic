@@ -14,7 +14,7 @@ blockquote p {
 
 .article {
     margin-top: 15px;
-    max-width: 700px;
+    max-width: 750px !important;
 }
 
 .article iframe, .article img {
@@ -63,7 +63,7 @@ blockquote p {
     border: none;
     margin-top: 30px;
     margin-bottom: 23px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     background-color: #f7f7f9
 }
 
@@ -87,6 +87,10 @@ blockquote p {
     color: black;
 }
 
+.text-deco-none:hover {
+    text-decoration: none;
+}
+
 .block {
     display: block;
 }
@@ -96,4 +100,12 @@ blockquote p {
     border-top: 1px solid #ddd;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.pager {
+    text-align: center;
+}
+
+.pager .btn {
+    margin: 15px;
 }

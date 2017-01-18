@@ -1,0 +1,11 @@
+<div class="profile-card">
+    <div class="text-center">
+	{{ partial "profile.html" . }}
+    </div>
+
+    {{ if isset .Site.Params "bio" }}
+    <p id="bio" class="hidden-sm-down">
+	{{ safeHTML .Site.Params.bio }}
+    </p>
+    {{ end }}
+</div>
