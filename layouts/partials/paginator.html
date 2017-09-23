@@ -2,27 +2,7 @@
     {{ range .Paginator.Pages }}
         {{ .Render "li" }}
     {{ end }}
-
-    <div id="tagList" class="hidden-md-down">
-        <h1>Tags</h1>
-        {{ range .Site.Taxonomies }}
-             {{ range .ByCount }}
-             <p>
-                 <a href="/tags/{{ .Name }}">{{ .Name }}</a>:
-                 {{ .Count }}
-             </p>
-             {{ end }}
-        {{ end }}
-    </div>
 </div>
-
-<style>
- #tagList {
-     position: absolute;
-     top: 400;
-     right: 30rem;
- }
-</style>
 
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext)  }}
 <div class="pager">
@@ -41,14 +21,16 @@
 {{ end }}
 
 
-<div class="li hidden-lg-up">
-    <h2>Tags</h2>
-    {{ range .Site.Taxonomies }}
-         {{ range .ByCount }}
-         <span>
-             <a href="/tags/{{ .Name }}">#{{ .Name }}</a>:
-             {{ .Count }} |
-         </span>
-         {{ end }}
-    {{ end }}
+<div class="container text-center">
+    <div class="li">
+        <h2>Tags</h2>
+        {{ range .Site.Taxonomies }}
+            {{ range .ByCount }}
+                <span>
+                    <a href="/tags/{{ .Name }}">#{{ .Name }}</a>:
+                    {{ .Count }} |
+                </span>
+            {{ end }}
+        {{ end }}
+    </div>
 </div>
