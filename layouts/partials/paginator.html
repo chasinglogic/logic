@@ -21,7 +21,7 @@
 {{ end }}
 
 
-<div class="container text-center">
+<div class="container text-center tag-container">
     <div class="li">
         <h2>Tags</h2>
         {{ range .Site.Taxonomies }}
@@ -34,3 +34,12 @@
         {{ end }}
     </div>
 </div>
+
+
+<style>
+ .tag-container {
+     margin-top: .5rem;
+     padding-top: .5rem;
+     border-top: 1px solid #ddd;
+ }
+</style>
