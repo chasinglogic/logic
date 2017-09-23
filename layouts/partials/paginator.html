@@ -1,22 +1,54 @@
-<div class="container">
+<div class="container-fluid">
     {{ range .Paginator.Pages }}
         {{ .Render "li" }}
     {{ end }}
+
+    <div id="tagList" class="hidden-md-down">
+        <h1>Tags</h1>
+        {{ range .Site.Taxonomies }}
+             {{ range .ByCount }}
+             <p>
+                 <a href="/tags/{{ .Name }}">{{ .Name }}</a>:
+                 {{ .Count }}
+             </p>
+             {{ end }}
+        {{ end }}
+    </div>
 </div>
+
+<style>
+ #tagList {
+     position: absolute;
+     top: 400;
+     right: 30rem;
+ }
+</style>
 
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext)  }}
 <div class="pager">
     {{ if .Paginator.HasPrev  }}
     <a class="text-deco-none" href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}">
-	<div class="btn btn-md btn-outline-primary d-inline-block">Prev</div>
+        <div class="btn btn-md btn-outline-primary d-inline-block">Prev</div>
     </a>
     {{ end }}
 
     {{ if .Paginator.HasNext }}
     <a class="text-deco-none" href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}">
-	<div class="btn btn-md btn-outline-primary d-inline-block">Next</div>
+        <div class="btn btn-md btn-outline-primary d-inline-block">Next</div>
     </a>
     {{ end }}
 </div>
 {{ end }}
 
+
+<div class="li hidden-lg-up">
+    <h2>Tags</h2>
+    {{ range .Site.Taxonomies }}
+         {{ range .ByCount }}
+         <span>
+             <a href="/tags/{{ .Name }}">#{{ .Name }}</a>:
+             {{ .Count }} |
+         </span>
+         {{ end }}
+    {{ end }}
+</div>

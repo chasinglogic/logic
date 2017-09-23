@@ -1,36 +1,43 @@
 {{ partial "header" . }}
 
-<div class="article container"> 
+<div class="article container">
     <!-- Desktop -->
     <h2 class="title hidden-sm-down">{{ .Title }}
-	<small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small></h2>
+	      <small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small></h2>
 
     <!-- Mobile -->
-	<h2 class="hidden-md-up">{{ .Title }} </h2>
-	<h5 class="title hidden-md-up">{{ .Date.Format "Mon, Jan 2, 2006" }}</h5>
+	  <h2 class="hidden-md-up">{{ .Title }} </h2>
+	  <h5 class="title hidden-md-up">{{ .Date.Format "Mon, Jan 2, 2006" }}</h5>
 
-	{{ .Content }}
-
+	  {{ .Content }}
 
 	<!-- Desktop -->
-	<a class="text-deco-none" href="/">
-	    <div class="btn btn-default
-		btn-block btn-lg home-button hidden-sm-down">
-		<i class="fa fa-home" aria-hidden="true"></i>
-		Home
-	    </div>
-	</a>
+	  <a class="text-deco-none" href="/">
+	      <div class="btn btn-default
+		                btn-block btn-lg home-button hidden-sm-down">
+		        <i class="fa fa-home" aria-hidden="true"></i>
+		        Home
+	      </div>
+	  </a>
 
-	
-	<div class="author-profile" style="text-align: center;">
-	    {{ partial "profile" . }}
-	</div>
+    <div class="ml-auto mr-auto text-center">
+        {{ range .Params.tags }}
+            <span>
+                 <a href="/tags/{{ . }}">#{{ . }}</a>
+            </span>
+        {{ end }}
+    </div>
+
+	  <div class="author-profile" style="text-align: center;">
+	      {{ partial "profile" . }}
+	  </div>
 </div>
+
 <!-- Mobile -->
 <a class="text-deco-none" href="/">
-    <div class="btn btn-primary home-button-mobile 
-		btn-block btn-lg home-button hidden-md-up">
-	<i class="fa fa-home" aria-hidden="true"></i>
+    <div class="btn btn-primary home-button-mobile
+		            btn-block btn-lg home-button hidden-md-up">
+	      <i class="fa fa-home" aria-hidden="true"></i>
     </div>
 </a>
 

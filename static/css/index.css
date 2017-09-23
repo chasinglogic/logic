@@ -7,14 +7,14 @@ blockquote p {
 }
 
 .li {
-    max-width: 700px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .article {
     margin-top: 15px;
-    max-width: 750px !important;
+    max-width: 900px !important;
 }
 
 .article iframe, .article img {
